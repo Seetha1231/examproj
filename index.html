@@ -1,0 +1,52 @@
+<html>
+<head>
+<style>
+form
+{
+position:absolute;
+top:220px;
+left:500px;
+width:300px;
+height:200px;
+background-color:yellow;
+}
+#d
+{
+border-radius:50px;
+color:black;
+background-color:red;
+align:center;
+cursor:pointer;
+padding:10px;
+font-size:20;
+}
+</style>
+<script type="text/javascript">
+function valid()
+{
+var actest=new RegExp("^\\w*\\d*@\\w*.\\w*$");
+var t=document.aform.umail.value;
+if(actest.test(t)){
+window.alert("valid email");
+return true;
+}
+else{
+alert("Invalid");
+document.getElementById("dd").focus();
+document.getElementById("dd").select();
+document.getElementById("dd").hide();
+return false;
+}
+}
+</script>
+</head>
+<body>
+<h1 style="text-align:center;color:red;">SUPERMARKET</h1> 
+<form  name="aform" onsubmit="return valid()" action="wel.jsp">
+Enter name :<br><input type="text" name="uname" /><br>
+Enter email:<br><input type="text" id="dd" name="umail"/>
+<br><br><br>
+<input type="submit"  value="go" id="d" />
+</form>
+</body>
+</html>
